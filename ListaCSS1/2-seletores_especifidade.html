@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<head>   
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <ol>
+      
+   <!--item 1--> <li id="lip0">Abacaxi</li>
+   <!--item 2--> <li           class="fruta">Melão</li>
+   <!--item 3--> <li id="lip2" class="fruta">Pera</li>
+   <!--item 4--> <li id="lip3" class="fruta">Uva</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
+   <!--item 6--> <li id="lip5" class="churras">Carne</li>
+   <!--item 7--> <li           class="churras">Linguiça</li>
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+   </ol>   
+   <p>
+      <b>Itens: </b> <br> <br>
+      <b>Item 1:</b> Fica vermelho, por causa da regra 1 que é aplicado para itens da lista <br> 
+      <b>Item 2:</b> Fica cinza, por causa da regra 3, mesmo que afetado por outra regra a 3 é passada apos a outra regra que o afeta fazendo ele ficar com essa cor <br>
+      <b>Item 3:</b> Fica azul, por conta da regra 6 que utiliza seu id como parametro <br> 
+      <b>Item 4:</b> Fica laranja, por causa da regra 7 que usando seu id e sua classe para chamar esse item <br>
+      <b>Item 5:</b> Fica cinza, assim como o item 2 pela mesma regra <br> 
+      <b>Item 6:</b> Fica roxo, por conta da regra 8, que busca o item com classe = churas e id = lip5 <br>
+      <b>Item 7:</b> Fica preto, por conta da regra 4 que localiza o item da lista que tem classe = churras depois de um item da lista qualquer <br> 
+      <b>Item 8:</b> Fica da cor magenta, por cause da regra 5 que busca o item com classe churras e draggable true e coloca na cor magenta  
+   </p>
+</body>
+</html>
+
+</body>
+</html>
