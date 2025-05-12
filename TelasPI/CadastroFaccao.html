@@ -3,16 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Facção</title>
     <style>
-        .body{
-            background-color:  #386b8f;
+       .corpo{
+        display: grid;
+        grid-template-rows: 1 1 1 1 1 1 1 1;
+        grid-template-columns: 1 1 1 ;
+        background-color:  #386b8f;
+       }
+       .Tela{
+        display: grid;
+        grid-row: 1/8;
+        grid-column: 2/2;
+       }
+
+        #GSF_logo{
+            display: grid;
+            grid-row: 1/1;
+            grid-column: 2/2;
+            width: 200px;
+            height: 150px;
         }
-
-
     </style>
+
 </head>
-<body>
+<body class="corpo">
+    <div class="Tela">
+        <img src="./TelasPrototipo.png" alt="" id="GSF_logo">
+        <div id="2Column">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required minlength="5" maxlength="30" size="30">
+        </div>
+        <div id="3Column">
+            <label for="acesso">Email:</label>
+            <input type="text" id="acesso" name="acesso" required minlength="5" maxlength="30" size="30">
+        </div>
+        <div id="4Column">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required minlength="5" maxlength="14" size="30">
+        </div>
+        <div id="5Column">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required minlength="5" maxlength="11" size="30">
+        </div>
+        <div id="6Column">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="5" maxlength="30" size="30">
+        </div>
+        <div id="7Column">
+            <input type="button" id="confirmar" value = "Cadastrar">
+        </div>
+        <div id="8Column">
+            <input type="button" id="confirmar" value = "Sair">
+        </div>
+    </div>
     
 </body>
 </html>
