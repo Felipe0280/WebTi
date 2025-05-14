@@ -5,57 +5,119 @@
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Cadastro de Facção</title>
     <style>
+        /* Falta: 
+            Estilizar igual ao do PI
+            Cor, botão, fonte, tamanho de componentes;
+        */
+
        .corpo{
-        display: grid;
-        grid-template-rows: 1 1 1 1 1 1 1 1;
-        grid-template-columns: 1 1 1 ;
         background-color:  #386b8f;
-       }
-       .Tela{
-        display: grid;
-        grid-row: 1/8;
-        grid-column: 2/2;
+        font-family: Arial, sans-serif;
        }
 
-        #GSF_logo{
-            display: grid;
-            grid-row: 1/1;
-            grid-column: 2/2;
+       .Tela{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+
+        font-weight: bold;
+       }
+
+        .GSF_logo{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
             width: 200px;
             height: 150px;
         }
+
+        #Column{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 5px;
+        }
+        
+        label{
+            width: 90px;
+            font-size: 20px;
+            text-align: right;
+            color: white;
+        }
+
+        input[type="text"], select {
+            padding: 8px 12px;    
+            border: none;
+            border-radius: 3px;         
+            font-size: 15px;      
+        }
+
+        input[type="password"], select {
+            padding: 8px 12px;    
+            border: none;
+            border-radius: 3px;         
+            font-size: 15px;      
+        }
+       
+        button{
+            padding: 10px 25px;
+            background-color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            color: #003366;
+            gap: 40px;
+         }
     </style>
 
 </head>
 <body class="corpo">
     <div class="Tela">
-        <img src="./TelasPrototipo.png" alt="" id="GSF_logo">
-        <div id="2Column">
+        <div id="Column">
+           <img src="./TelasPrototipo.png" alt="" class="GSF_logo"> 
+           
+        </div>
+        
+        <div id="Column">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required minlength="5" maxlength="30" size="30">
+            <input class="txtImput" type="text" id="nome" name="nome" required minlength="5" maxlength="30" size="30">
+           
         </div>
-        <div id="3Column">
+
+        <div id="Column">
             <label for="acesso">Email:</label>
-            <input type="text" id="acesso" name="acesso" required minlength="5" maxlength="30" size="30">
+            <input class="txtImput" type="text" id="acesso" name="acesso" required minlength="5" maxlength="30" size="30">
+           
         </div>
-        <div id="4Column">
+
+        <div id="Column">
             <label for="cnpj">CNPJ:</label>
-            <input type="text" id="cnpj" name="cnpj" required minlength="5" maxlength="14" size="30">
+            <input class="txtImput" type="text" id="cnpj" name="cnpj" required minlength="5" maxlength="14" size="30">
+            
         </div>
-        <div id="5Column">
+
+        <div id="Column">
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required minlength="5" maxlength="11" size="30">
+            <input class="txtImput" type="text" id="telefone" name="telefone" required minlength="5" maxlength="11" size="30">
+            
         </div>
-        <div id="6Column">
+
+        <div id="Column">
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required minlength="5" maxlength="30" size="30">
+            <input class="txtImput" type="password" id="senha" name="senha" required minlength="5" maxlength="30" size="30">
+            
         </div>
-        <div id="7Column">
-            <input type="button" id="confirmar" value = "Cadastrar">
+
+        <div id="Column">
+            <button>Cadastrar</button>
         </div>
-        <div id="8Column">
-            <input type="button" id="confirmar" value = "Sair">
+
+        <div id="Column">
+            <button>Sair</button>
         </div>
+
     </div>
     
 </body>

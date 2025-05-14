@@ -3,16 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela de Perfil</title>
     <style>
-        .body{
-            background-color:  #386b8f;
-        }
 
+    .corpo{
+        background-color:  #386b8f;
+        font-family: Arial, sans-serif;
+    }
 
+    .menuBar {
+      display: flex;
+      background-color: #5496c5;
+      padding: 15px 15px;
+      gap: 20px;
+    }
+
+    .menuBar a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .menuBar a:hover {
+      color: white;
+    }
+
+    .principal{
+        min-height: 90vh;
+        background-color:  #386b8f;
+        padding: 30px 60px;
+    }
+
+    .formaTela{
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        flex-wrap: wrap;
+    }
+
+    h2{
+      text-align: center;
+       font-size: 30px;
+       color: white;
+       margin-bottom: 40px;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;/* verificar distancia, possivelmente maior*/
+    }
+
+    .linha{
+       display: flex;
+       align-items: center;
+       gap: 15px;
+    }
+
+    label{
+        width: 90px;
+        font-size: 20px;
+        text-align: right;
+        color: white;
+    }
+
+     input[type="text"], select {
+      padding: 8px 12px;    
+      border: none;
+      border-radius: 3px;         
+      font-size: 15px;      
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 40px 10px;
+    }
+
+    button{
+        padding: 10px 25px;
+        background-color: white;
+        font-weight: bold;
+        color: black;
+        border-radius: 5px;
+        border: none;
+    }
     </style>
 </head>
-<body>
-    
+<body class="corpo">
+    <div class="menuBar">
+        <a href="">Home</a>
+        <a href="">Visualizar</a>
+        <a href="">Cadastrar</a>
+    </div>
+
+    <div class="principal">
+        <h2>Perfil</h2>
+        <div class="formaTela">
+            <div class="column" id="primeiraColuna">
+                <div class="linha" id="cnpj">
+                    <label for="cnpj">CNPJ:</label>
+                    <input class="txtImput" type="text" id="cnpj" name="cnpj" required minlength="5" maxlength="30" size="30">
+                </div>
+                <div class="linha" id="contato">
+                    <label for="contato">Contato:</label>
+                    <input class="txtImput" type="text" id="contato" name="contato" required minlength="5" maxlength="30" size="30">
+                </div>
+                <div class="linha" id="endereco">
+                    <label for="endereco">Endereco:</label>
+                    <input class="txtImput" type="text" id="endereco" name="endereco" required minlength="5" maxlength="30" size="30">
+                </div>
+            </div>
+
+            <div class="column" id="segundaColuna">
+                <div class="linha" id="email">
+                    <label for="email">Email:</label>
+                    <input class="txtImput" type="text" id="email" name="email" required minlength="5" maxlength="30" size="30">
+                </div>
+                <div class="linha" id="nome">
+                    <label for="nome">Nome:</label>
+                    <input class="txtImput" type="text" id="nome" name="nome" required minlength="5" maxlength="30" size="30">
+                </div>
+                <div class="linha" id="senha">
+                    <label for="senha">Senha:</label>
+                    <input class="txtImput" type="text" id="senha" name="senha" required minlength="5" maxlength="30" size="30">
+                </div>
+
+                <div class="btn">
+                    <button>Editar</button>
+                    <button>Sair do Perfil</button>
+                    <button>Voltar</button>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        
+    </div>
 </body>
 </html>
