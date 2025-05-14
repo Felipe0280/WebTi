@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            display: flex;
-            align-items: center;
-        }
-    </style>
+    <title>Numero Randola</title>
 </head>
 <body>
+    <h2><b>Numero aleatorio:</b></h2>
     <button id="botao"> clique aqui</button>
 
     <script>
         let meuBotao = document.querySelector("#botao")
-        let i =0
-        document.body.appendChild(meuBotao);
+        let i = 0 
         meuBotao.addEventListener("click", ()=>{
-            meuBotao.innerHTML = i
-            i++
-        })
+           i = Math.trunc(Math.random() * 100)
+           
+           let p= document.createElement("p")
+           p.innerHTML = "o numero aleatorio é: " + i
+           document.body.appendChild(p)
+       })
     </script>
 </body>
 </html>
