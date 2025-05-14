@@ -1,0 +1,13 @@
+1) No momento que é digitado a url o navegador pede os dados por meio do protocol HTTPS/HTTP ao servidor, que se tudo certo retorna os dados para o acesso de navegador.
+
+2) O HTML não é uma linguagem de uso geral. O Html é uma linguagem de marcação, sendo utilizada para marcar os elementos (como o div ou o paragrafo, etc) e suas ocupações na tela 
+quando na web.
+
+3)<style>
+    .churras{color: blue}. 
+  </style> 
+
+Para utilizar a regra css é necessario abrir a tag style no head, e dentro dela selecionar o elemento que será utilizado, no meu exemplo selecionei tudo que tivesse a classe como 
+"churras" (como exemplo, <div class="churras">Carne</div>), dessa forma indiquei a regra "color", que permite modificar a cor do texto, e o alterei para blue. Então se fizermos esse
+exemplo e o abrimos na web teremos um texto escrito "carne" em azul.
+

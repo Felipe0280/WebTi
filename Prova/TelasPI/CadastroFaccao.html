@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Cadastro de Facção</title>
     <style>
-        /* Falta: 
-            Estilizar igual ao do PI
-            Cor, botão, fonte, tamanho de componentes;
-        */
-
+        
        .corpo{
         background-color:  #386b8f;
         font-family: Arial, sans-serif;
@@ -33,7 +29,7 @@
             height: 150px;
         }
 
-        #Column{
+        .linha{
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -75,46 +71,46 @@
 </head>
 <body class="corpo">
     <div class="Tela">
-        <div id="Column">
+        <div class="linha">
            <img src="./TelasPrototipo.png" alt="" class="GSF_logo"> 
            
         </div>
         
-        <div id="Column">
+        <div class="linha">
             <label for="nome">Nome:</label>
             <input class="txtImput" type="text" id="nome" name="nome" required minlength="5" maxlength="30" size="30">
            
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <label for="acesso">Email:</label>
             <input class="txtImput" type="text" id="acesso" name="acesso" required minlength="5" maxlength="30" size="30">
            
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <label for="cnpj">CNPJ:</label>
             <input class="txtImput" type="text" id="cnpj" name="cnpj" required minlength="5" maxlength="14" size="30">
             
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <label for="telefone">Telefone:</label>
             <input class="txtImput" type="text" id="telefone" name="telefone" required minlength="5" maxlength="11" size="30">
             
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <label for="senha">Senha:</label>
             <input class="txtImput" type="password" id="senha" name="senha" required minlength="5" maxlength="30" size="30">
             
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <button>Cadastrar</button>
         </div>
 
-        <div id="Column">
+        <div class="linha">
             <button>Sair</button>
         </div>
 
