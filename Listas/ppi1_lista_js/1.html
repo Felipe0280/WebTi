@@ -16,7 +16,8 @@
     <script>
         console.log("oi")
         alert("Opa")
-        document.getElementById("paragrafo").innerHTML = "A hora atual" 
+        let h = new Date()
+        document.getElementById("paragrafo").innerHTML = "A hora atual: " + h.toLocaleTimeString
     </script>
 </body>
 </html>
