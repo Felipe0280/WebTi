@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Atividade 3 da lista grid</title>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+        "a a s b"
+        "c d d d";
+
+        grid-template-columns: 1fr 1fr 1fr 200px;
+        grid-template-rows: 2fr 6fr;
+        gap: 10px;
+        height: 100vh;
+        width: 200vh;
+        padding: 10px;
+        background: #f0f0f0;
+    }
+
+    .a {
+        grid-area: a;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+
+    .s{
+      grid-area: s;
+        background: #ffffff;
+        padding: 1rem;
+    }
+
+    .b {
+        grid-area: b;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+    .c {
+        grid-area: c;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+    .d {
+        grid-area: d;
+        display: grid;
+        grid-template-areas:
+        "e f f g"
+        "m i i j";
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        gap: 10px;
+        background: #444;
+        padding: 10px;
+    }
+
+    .d div {
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+
+    .e {
+        grid-area: e;
+        background: white;
+        color: black;
+        padding: 1rem;
+    }
+
+    .f {
+        grid-area: f;
+        background: white;
+        color: black;
+        padding: 1rem;
+    }
+
+    .g {
+        grid-area: g;
+        background: white;
+        color: black;
+        padding: 1rem;
+    }
+
+    .i {
+        grid-area: i;
+        background: white;
+        color: black;
+        padding: 1rem;
+    }
+    .j {
+        grid-area: j;
+        background: white;
+        color: black;
+        padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="a">A</div>
+    <div class="b">B</div>
+    <div class="c">C</div>
+    <div class="d">
+      <div class="e">E</div>
+      <div class="f">F</div>
+      <div class="g">G</div>
+      <div class="m">M</div>
+      <div class="i">I</div>
+      <div class="j">J</div>
+    </div>
+  </div>
+</body>
+</html>
